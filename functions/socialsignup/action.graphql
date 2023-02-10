@@ -1,0 +1,17 @@
+type Mutation {
+  socialsignup(input: socialsignupInput!): socialsignupResponse
+}
+
+input socialsignupInput {
+  email: String!
+  name: String!
+  img_url: String
+  access_token: String!
+  provider_type: String!
+}
+
+type socialsignupResponse {
+  status: Boolean!
+  message: String!
+  data: UserWithToken
+}

@@ -1,0 +1,25 @@
+type UserWithToken {
+  id: Int!
+  name: String!
+  email: String!
+  role: String!
+  token: String
+  expires_in: String
+  refresh_token: String
+  refresh_token_expires_in: String
+}
+
+type Mutation {
+  signin(input: signinInput!): signinResponse
+}
+
+input signinInput {
+  email: String!
+  password: String!
+}
+
+type signinResponse {
+  status: Boolean!
+  message: String!
+  data: UserWithToken
+}

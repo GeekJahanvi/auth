@@ -1,0 +1,13 @@
+type Mutation {
+  addStudent(input: addStudentInput!): addStudentResponse
+}
+
+input addStudentInput {
+  email: String!
+  name: String!
+}
+
+type addStudentResponse {
+  status: Boolean!
+  message: String!
+}

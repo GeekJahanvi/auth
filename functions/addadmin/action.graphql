@@ -1,0 +1,13 @@
+type Mutation {
+  addAdmin(input: addAdminInput!): addAdminResponse
+}
+
+input addAdminInput {
+  email: String!
+  name: String!
+}
+
+type addAdminResponse {
+  status: Boolean!
+  message: String!
+}
